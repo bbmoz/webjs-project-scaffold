@@ -13,4 +13,3 @@
 ## Other Deps
 1. [direnv](https://github.com/direnv/direnv)
 1. [nvm](https://github.com/creationix/nvm)
-1. [docker, docker-compose](https://docs.docker.com/docker-for-mac/install/)

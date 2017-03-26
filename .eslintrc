@@ -1,0 +1,16 @@
+{
+  "extends": ["standard"],
+  "env": {
+    "browser": true,
+    "jasmine": true
+  },
+  "rules": {
+    "prefer-const": 2,
+    "no-var": 1,
+    "no-new": 1,
+    "padded-blocks": 0
+  },
+  "globals": {
+    "$_MESSAGE": true
+  }
+}

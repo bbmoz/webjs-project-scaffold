@@ -1,0 +1,33 @@
+{
+  "name": "example-project",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "pretest": "eslint *.js src/ test/",
+    "test": "testem ci",
+    "tdd": "testem -l selenium",
+    "start": "nodemon --watch webpack.config.js --exec 'webpack-dev-server --content-base dist/ --hot --inline'",
+    "build": "rm -rf dist/ && webpack -p --bail --progress"
+  },
+  "author": "",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-latest": "^6.24.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "eslint": "^3.18.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "html-webpack-plugin": "^2.28.0",
+    "jasmine": "^2.5.3",
+    "nodemon": "^1.11.0",
+    "testem": "^1.15.0",
+    "testem-selenium-launcher": "^0.1.0",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  }
+}

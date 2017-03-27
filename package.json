@@ -5,13 +5,13 @@
   "description": "",
   "scripts": {
     "pretest": "eslint *.js src/ test/",
-    "test": "testem ci",
-    "tdd": "testem -l selenium",
+    "test": "ava",
     "start": "nodemon --watch webpack.config.js --exec 'webpack-dev-server --content-base dist/ --hot --inline'",
     "build": "rm -rf dist/ && webpack -p --bail --progress"
   },
   "author": "",
   "devDependencies": {
+    "ava": "^0.18.2",
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -23,11 +23,23 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.1.1",
     "html-webpack-plugin": "^2.28.0",
-    "jasmine": "^2.5.3",
     "nodemon": "^1.11.0",
-    "testem": "^1.15.0",
-    "testem-selenium-launcher": "^0.1.0",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.4.2"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "source": [
+      "src/**/*.js"
+    ],
+    "concurrency": 5,
+    "failWithoutAssertions": true,
+    "powerAssert": true,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }

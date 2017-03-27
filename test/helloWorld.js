@@ -1,10 +1,16 @@
+import test from 'ava'
 import helloWorld from './../src/helloWorld'
 
-describe('helloWorld()', () => {
+test('greet with pass message', t => {
+  t.plan(1)
+  const expectedMsg = 'hello world'
+  const msg = helloWorld(expectedMsg)
+  t.is(msg, expectedMsg)
+})
 
-  it('should say hello', () => {
-    const msg = helloWorld()
-    expect(msg).toBe('hello world')
-  })
-
+test('greet with default message', t => {
+  t.plan(1)
+  const expectedMsg = 'hello world!'
+  const msg = helloWorld()
+  t.is(msg, expectedMsg)
 })

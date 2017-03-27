@@ -1,5 +1,5 @@
-function helloWorld () {
-  return $_MESSAGE
+function helloWorld (msg = 'hello world!') {
+  return msg
 }
 
 export default helloWorld

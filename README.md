@@ -10,6 +10,3 @@
 1. `npm run tdd`  *run tests in TDD mode*
 1. `npm i`        *install npm deps*
 
-## Other Deps
-1. [direnv](https://github.com/direnv/direnv)
-1. [nvm](https://github.com/creationix/nvm)

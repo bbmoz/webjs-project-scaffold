@@ -6,9 +6,9 @@
   "scripts": {
     "pretest": "eslint *.js src/ test/",
     "test": "ava",
-    "pretest:functional": "./config/ngrok.sh",
     "pretunnel": "./bin/ngrok/ngrok.sh",
     "tunnel": "ngrok start app",
+    "pretest:functional": "./bin/ngrok/ngrok.sh",
     "test:functional": "codeceptjs run --steps",
     "start": "nodemon --watch webpack.config.js --exec 'webpack-dev-server --content-base dist/ --hot --inline'",
     "build": "rm -rf dist/ && webpack -p --bail --progress"

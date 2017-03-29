@@ -6,10 +6,9 @@
   "scripts": {
     "pretest": "eslint *.js src/ test/",
     "test": "ava",
-    "pretunnel": "./bin/ngrok/ngrok.sh",
-    "tunnel": "ngrok start app",
-    "pretest:functional": "./bin/ngrok/ngrok.sh",
-    "test:functional": "codeceptjs run --steps",
+    "test:fn:setup": "./misc/ngrok/ngrok.sh && hotel add 'npm start' -n app -e NODE_ENV; hotel add -n selenium-hub-logs 'docker logs selenium-hub -f'; hotel add -n selenium-node-chrome-logs 'docker logs seleniumgridcc_selenium-chrome_1 -f'; hotel add -n selenium-node-firefox-logs 'docker logs seleniumgridcc_selenium-firefox_1 -f'",
+    "test:fn:tunnel": "ngrok start app",
+    "test:fn": "codeceptjs run --steps",
     "start": "nodemon --watch webpack.config.js --exec 'webpack-dev-server --content-base dist/ --hot --inline'",
     "build": "rm -rf dist/ && webpack -p --bail --progress"
   },
@@ -27,6 +26,7 @@
     "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.1.1",
+    "hotel": "^0.7.1",
     "html-webpack-plugin": "^2.28.0",
     "nodemon": "^1.11.0",
     "selenium-webdriver": "^3.3.0",
@@ -35,7 +35,7 @@
   },
   "ava": {
     "files": [
-      "test/**/*.js"
+      "test/unit/**/*.js"
     ],
     "source": [
       "src/**/*.js"

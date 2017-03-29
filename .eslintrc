@@ -11,6 +11,8 @@
     "padded-blocks": 0
   },
   "globals": {
-    "$_MESSAGE": true
+    "$_MESSAGE": true,
+    "Feature": true,
+    "Scenario": true
   }
 }

@@ -1,5 +1,5 @@
 import test from 'ava'
-import helloWorld from './../src/helloWorld'
+import helloWorld from './../../src/helloWorld'
 
 test('greet with pass message', t => {
   t.plan(1)

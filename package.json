@@ -6,8 +6,8 @@
   "scripts": {
     "pretest": "eslint *.js src/ test/",
     "test": "ava",
-    "test:fn:setup": "./misc/ngrok/ngrok.sh && hotel add 'npm start' -n app -e NODE_ENV; hotel add -n selenium-hub-logs 'docker logs selenium-hub -f'; hotel add -n selenium-node-chrome-logs 'docker logs seleniumgridcc_selenium-chrome_1 -f'; hotel add -n selenium-node-firefox-logs 'docker logs seleniumgridcc_selenium-firefox_1 -f'",
-    "test:fn:tunnel": "ngrok start app",
+    "test:fn:tunnel": "./misc/ngrok/start.sh",
+    "test:fn:hotel": "./misc/hotel/start.sh",
     "test:fn": "codeceptjs run --steps",
     "start": "nodemon --watch webpack.config.js --exec 'webpack-dev-server --content-base dist/ --hot --inline'",
     "build": "rm -rf dist/ && webpack -p --bail --progress"

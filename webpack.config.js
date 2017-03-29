@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const vars = require(`./envs/${process.env.NODE_ENV}`)
+const vars = require(`./envs/${process.env.NODE_ENV || 'dev'}`)
 
 const $ = {
   webpack: {

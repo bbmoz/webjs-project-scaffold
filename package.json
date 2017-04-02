@@ -6,8 +6,7 @@
   "scripts": {
     "pretest": "eslint *.js src/ test/",
     "test": "ava",
-    "test:fn:tunnel": "./misc/ngrok/start.sh",
-    "test:fn:hotel": "./misc/hotel/start.sh",
+    "test:fn:tunnel": "./bin/tunnel/start.sh",
     "test:fn": "codeceptjs run --steps",
     "start": "nodemon --watch webpack.config.js --exec 'webpack-dev-server --content-base dist/ --hot --inline'",
     "build": "rm -rf dist/ && webpack -p --bail --progress"
@@ -26,7 +25,6 @@
     "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.1.1",
-    "hotel": "^0.7.1",
     "html-webpack-plugin": "^2.28.0",
     "nodemon": "^1.11.0",
     "selenium-webdriver": "^3.3.0",

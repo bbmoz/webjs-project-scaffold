@@ -6,9 +6,10 @@
 
 ## Tasks
 1. `npm start`                *run app at **http://localhost:8080***
-1. `npm test`                 *lint and run tests*
-1. `npm test -- --watch`      *run tests in TDD mode*
+1. `npm test`                 *lint and run unit tests*
+1. `npm test -- --watch`      *run unit tests in TDD mode*
 1. `npm install`              *install npm deps*
-1. `npm run test:fn`          *run functional tests (requires tunnel and app to be running)*
-1. `npm run test:fn:ngrok`   *expose local app (make sure to copy address to `WEB_URL` in **.envrc**), inspect at **http://localhost:4040***
-1. `npm run test:fn:hotel`    *start process manager at **http://localhost:2000***
+1. `npm run test:fn:tunnel`   *start tunnel*
+1. `npm run test:fn`          *run functional tests*
+
+*Before running functional tests, make sure to start your app and your tunnel. Once the tunnel is running, source `./bin/tunnel/tunnel.env`.*

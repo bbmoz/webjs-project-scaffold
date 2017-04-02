@@ -1,5 +1,3 @@
-const vars = {
+module.exports = {
   $_MESSAGE: 'hello world! (prod)'
 }
-
-module.exports = vars

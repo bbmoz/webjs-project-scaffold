@@ -4,7 +4,7 @@ exports.config = {
   output: './test/functional/output/',
   helpers: {
     SeleniumWebdriver: {
-      url: process.env.WEB_URL,
+      url: process.env.WEB_TUNNEL_URL,
       browser: 'chrome',
       seleniumAddress: process.env.SELENIUM_HUB_ADDR
     }
